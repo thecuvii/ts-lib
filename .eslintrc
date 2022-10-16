@@ -1,8 +1,0 @@
-{
-  "extends": ["alloy","alloy/typescript"],
-  "plugins": ["prettier"],
-    "rules": {
-      "prettier/prettier": "error"
-    }
-
-}
