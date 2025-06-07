@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2022",
-    "lib": [
-      "es2022"
-    ],
+    "lib": ["es2022"],
     "moduleDetection": "force",
     "baseUrl": "./src",
     "module": "preserve",
@@ -21,11 +19,6 @@
     "verbatimModuleSyntax": true,
     "skipLibCheck": true
   },
-  "include": [
-    "src",
-    "tests"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src", "tests"],
+  "exclude": ["node_modules"]
 }
