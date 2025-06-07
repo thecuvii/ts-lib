@@ -1,15 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es2022",
-    "lib": ["es2022"],
+    "target": "esnext",
+    "lib": ["esnext"],
     "moduleDetection": "force",
-    "baseUrl": "./src",
-    "module": "preserve",
-    "paths": {
-      "~/*": ["./src/*"]
-    },
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "allowJs": true,
     "strict": true,
     "noImplicitOverride": true,
     "noUncheckedIndexedAccess": true,
@@ -17,7 +13,14 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
-    "skipLibCheck": true
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+
+    // eslint-disable-next-line jsonc/sort-keys
+    "baseUrl": "./src",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
   },
   "include": ["src", "tests"],
   "exclude": ["node_modules"]
