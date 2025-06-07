@@ -2,4 +2,5 @@ packages:
   - playground
   - examples/*
 onlyBuiltDependencies:
+  - '@swc/core'
   - esbuild
