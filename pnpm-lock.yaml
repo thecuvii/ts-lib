@@ -4,43 +4,85 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@antfu/eslint-config':
+      specifier: ^4.14.1
+      version: 4.14.1
+    '@types/node':
+      specifier: ^22.15.30
+      version: 22.15.30
+    bumpp:
+      specifier: ^10.1.1
+      version: 10.1.1
+    bunchee:
+      specifier: ^6.5.2
+      version: 6.5.2
+    eslint:
+      specifier: ^9.28.0
+      version: 9.28.0
+    eslint-config-prettier:
+      specifier: ^10.1.5
+      version: 10.1.5
+    eslint-plugin-prettier:
+      specifier: ^5.4.1
+      version: 5.4.1
+    prettier:
+      specifier: ^3.5.3
+      version: 3.5.3
+    tsx:
+      specifier: ^4.19.4
+      version: 4.19.4
+    typescript:
+      specifier: ^5.8.3
+      version: 5.8.3
+    vitest:
+      specifier: ^3.2.2
+      version: 3.2.2
+
 importers:
 
   .:
     devDependencies:
       '@antfu/eslint-config':
-        specifier: ^4.14.1
+        specifier: 'catalog:'
         version: 4.14.1(@vue/compiler-sfc@3.5.16)(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)(vitest@3.2.2(@types/debug@4.1.12)(@types/node@22.15.30)(jiti@2.4.2)(tsx@4.19.4)(yaml@2.8.0))
       '@types/node':
-        specifier: ^22.15.30
+        specifier: 'catalog:'
         version: 22.15.30
       bumpp:
-        specifier: ^10.1.1
+        specifier: 'catalog:'
         version: 10.1.1
       bunchee:
-        specifier: ^6.5.2
+        specifier: 'catalog:'
         version: 6.5.2(typescript@5.8.3)
       eslint:
-        specifier: ^9.28.0
+        specifier: 'catalog:'
         version: 9.28.0(jiti@2.4.2)
       eslint-config-prettier:
-        specifier: ^10.1.5
+        specifier: 'catalog:'
         version: 10.1.5(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-prettier:
-        specifier: ^5.4.1
+        specifier: 'catalog:'
         version: 5.4.1(eslint-config-prettier@10.1.5(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))(prettier@3.5.3)
       prettier:
-        specifier: ^3.5.3
+        specifier: 'catalog:'
         version: 3.5.3
+      simple-git-hooks:
+        specifier: ^2.13.0
+        version: 2.13.0
       tsx:
-        specifier: ^4.19.4
+        specifier: 'catalog:'
         version: 4.19.4
       typescript:
-        specifier: ^5.8.3
+        specifier: 'catalog:'
         version: 5.8.3
       vitest:
-        specifier: ^3.2.2
+        specifier: 'catalog:'
         version: 3.2.2(@types/debug@4.1.12)(@types/node@22.15.30)(jiti@2.4.2)(tsx@4.19.4)(yaml@2.8.0)
+      vitest-package-exports:
+        specifier: ^0.1.1
+        version: 0.1.1
 
 packages:
 
@@ -1908,6 +1950,10 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
+  simple-git-hooks@2.13.0:
+    resolution: {integrity: sha512-N+goiLxlkHJlyaYEglFypzVNMaNplPAk5syu0+OPp/Bk6dwVoXF6FfOw2vO0Dp+JHsBaI+w6cm8TnFl2Hw6tDA==}
+    hasBin: true
+
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
@@ -2113,6 +2159,9 @@ packages:
         optional: true
       yaml:
         optional: true
+
+  vitest-package-exports@0.1.1:
+    resolution: {integrity: sha512-rXgU5noxaaMA5VJXgVPhXRzPiQ1WFmWwgo8dQFPg9j/yFM028scO0IAylFHVI8XMRevhozEt1usa6RQYQY26lg==}
 
   vitest@3.2.2:
     resolution: {integrity: sha512-fyNn/Rp016Bt5qvY0OQvIUCwW2vnaEBLxP42PmKbNIoasSYjML+8xyeADOPvBe+Xfl/ubIw4og7Lt9jflRsCNw==}
@@ -4212,6 +4261,8 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
+  simple-git-hooks@2.13.0: {}
+
   sisteransi@1.0.5: {}
 
   source-map-js@1.2.1: {}
@@ -4390,6 +4441,11 @@ snapshots:
       jiti: 2.4.2
       tsx: 4.19.4
       yaml: 2.8.0
+
+  vitest-package-exports@0.1.1:
+    dependencies:
+      find-up-simple: 1.0.1
+      pathe: 2.0.3
 
   vitest@3.2.2(@types/debug@4.1.12)(@types/node@22.15.30)(jiti@2.4.2)(tsx@4.19.4)(yaml@2.8.0):
     dependencies:

@@ -4,3 +4,17 @@ packages:
 onlyBuiltDependencies:
   - '@swc/core'
   - esbuild
+catalog:
+  '@antfu/eslint-config': ^4.14.1
+  '@types/node': ^22.15.30
+  bumpp: ^10.1.1
+  bunchee: ^6.5.2
+  eslint: ^9.28.0
+  eslint-config-prettier: ^10.1.5
+  eslint-plugin-prettier: ^5.4.1
+  prettier: ^3.5.3
+  simple-git-hooks: ^2.13.0
+  tsx: ^4.19.4
+  typescript: ^5.8.3
+  vitest: ^3.2.2
+  vitest-package-exports: ^0.1.1

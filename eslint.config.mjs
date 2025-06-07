@@ -5,6 +5,8 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 export default antfu(
   {
     stylistic: false,
+    type: "lib",
+    pnpm: true,
   },
   eslintConfigPrettier,
   eslintPluginPrettierRecommended,
