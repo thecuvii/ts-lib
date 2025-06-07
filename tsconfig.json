@@ -5,7 +5,11 @@
       "es2022"
     ],
     "moduleDetection": "force",
+    "baseUrl": "./src",
     "module": "preserve",
+    "paths": {
+      "~/*": ["./src/*"]
+    },
     "resolveJsonModule": true,
     "allowJs": true,
     "strict": true,
@@ -18,7 +22,8 @@
     "skipLibCheck": true
   },
   "include": [
-    "src/*.ts",
+    "src",
+    "tests"
   ],
   "exclude": [
     "node_modules"
