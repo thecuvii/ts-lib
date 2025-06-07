@@ -27,8 +27,8 @@
   "files": [
     "dist"
   ],
-  "engines": {
-    "node": ">=22"
+  "engine": {
+    "node": ">=24"
   },
   "scripts": {
     "build": "unbuild",
