@@ -1,24 +1,25 @@
 {
   "name": "name",
+  "type": "module",
   "version": "0.0.0",
+  "packageManager": "pnpm@10.11.1",
   "description": "",
-  "keywords": [],
+  "author": "thecuvii <i@cuvii.dev>",
+  "license": "MIT",
   "homepage": "https://github.com/thecuvii/[name]#readme",
-  "bugs": {
-    "url": "https://github.com/thecuvii/[name]/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thecuvii/[name].git"
   },
-  "license": "MIT",
-  "author": "thecuvii <i@cuvii.dev>",
+  "bugs": {
+    "url": "https://github.com/thecuvii/[name]/issues"
+  },
+  "keywords": [],
   "sideEffects": false,
-  "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
     }
   },
   "module": "./dist/index.mjs",
@@ -26,6 +27,9 @@
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
@@ -37,6 +41,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^4.14.1",
     "@types/node": "^22.15.30",
     "bumpp": "^10.1.1",
     "eslint": "^9.28.0",
@@ -44,9 +49,5 @@
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
     "vitest": "^3.2.2"
-  },
-  "packageManager": "pnpm@10.11.1",
-  "engines": {
-    "node": ">=22"
   }
 }
