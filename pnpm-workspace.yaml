@@ -1,12 +1,9 @@
 packages:
   - playground
   - examples/*
-onlyBuiltDependencies:
-  - '@swc/core'
-  - esbuild
 catalog:
-  '@antfu/eslint-config': ^4.14.1
-  '@types/node': ^22.15.30
+  "@antfu/eslint-config": ^4.14.1
+  "@types/node": ^22.15.30
   bumpp: ^10.1.1
   bunchee: ^6.5.2
   eslint: ^9.28.0
@@ -18,3 +15,6 @@ catalog:
   typescript: ^5.8.3
   vitest: ^3.2.2
   vitest-package-exports: ^0.1.1
+onlyBuiltDependencies:
+  - "@swc/core"
+  - esbuild
