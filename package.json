@@ -3,36 +3,26 @@
   "version": "0.0.0",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/withyellow/[name]#readme",
+  "homepage": "https://github.com/thecuvii/[name]#readme",
   "bugs": {
-    "url": "https://github.com/withyellow/[name]/issues"
+    "url": "https://github.com/thecuvii/[name]/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/withyellow/[name].git"
+    "url": "git+https://github.com/thecuvii/[name].git"
   },
   "license": "MIT",
-  "author": "withyellow <xw5427@gmail.com>",
+  "author": "thecuvii <i@cuvii.dev>",
   "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     }
   },
-  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
   "files": [
     "dist"
   ],
@@ -40,47 +30,23 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
-    "prepare": "husky install",
-    "prepublishOnly": "nr build",
+    "prepublishOnly": "pnpm build",
     "release": "bumpp && npm publish",
     "start": "tsx src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
-  "lint-staged": {
-    "*.(js|ts|tsx|jsx)": [
-      "prettier --write",
-      "eslint --fix",
-      "eslint"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
   "devDependencies": {
-    "@antfu/ni": "^0.19.0",
-    "@babel/types": "^7.21.3",
-    "@types/node": "^18.15.11",
-    "@typescript-eslint/eslint-plugin": "^5.57.0",
-    "@typescript-eslint/parser": "^5.57.0",
-    "bumpp": "^8.2.1",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.37.0",
-    "eslint-config-alloy": "^4.9.0",
-    "eslint-define-config": "^1.17.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.3",
-    "prettier": "^2.8.7",
-    "tsx": "^3.12.6",
-    "typescript": "^4.9.5",
-    "unbuild": "^1.1.2",
-    "vitest": "^0.28.5"
+    "@types/node": "^22.15.30",
+    "bumpp": "^10.1.1",
+    "eslint": "^9.28.0",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.2"
   },
-  "packageManager": "pnpm@7.0.0",
+  "packageManager": "pnpm@10.11.1",
   "engines": {
-    "node": ">=14",
-    "pnpm": ">=7.0.0"
+    "node": ">=22"
   }
 }
